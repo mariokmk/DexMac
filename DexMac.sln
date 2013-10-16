@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dex.net", "dex.net\dex.net\dex.net.csproj", "{2B7D42B6-F491-4294-A052-8A30B16EFB9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DexMac", "DexMac\DexMac.csproj", "{E23D7BA3-B491-4D8C-B6FD-6E552FB3B3D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Default|Any CPU = Default|Any CPU
+		AppStore|Any CPU = AppStore|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B7D42B6-F491-4294-A052-8A30B16EFB9A}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B7D42B6-F491-4294-A052-8A30B16EFB9A}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{2B7D42B6-F491-4294-A052-8A30B16EFB9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B7D42B6-F491-4294-A052-8A30B16EFB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B7D42B6-F491-4294-A052-8A30B16EFB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B7D42B6-F491-4294-A052-8A30B16EFB9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDDF6181-818E-4875-8FBF-5F488C5FBEF6}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDDF6181-818E-4875-8FBF-5F488C5FBEF6}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{CDDF6181-818E-4875-8FBF-5F488C5FBEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDDF6181-818E-4875-8FBF-5F488C5FBEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDDF6181-818E-4875-8FBF-5F488C5FBEF6}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDDF6181-818E-4875-8FBF-5F488C5FBEF6}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{CDDF6181-818E-4875-8FBF-5F488C5FBEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDDF6181-818E-4875-8FBF-5F488C5FBEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE901DF2-B16A-45A2-9323-1C0E13E35D35}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE901DF2-B16A-45A2-9323-1C0E13E35D35}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{DE901DF2-B16A-45A2-9323-1C0E13E35D35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE901DF2-B16A-45A2-9323-1C0E13E35D35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE901DF2-B16A-45A2-9323-1C0E13E35D35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE901DF2-B16A-45A2-9323-1C0E13E35D35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E23D7BA3-B491-4D8C-B6FD-6E552FB3B3D0}.AppStore|Any CPU.ActiveCfg = AppStore|Any CPU
+		{E23D7BA3-B491-4D8C-B6FD-6E552FB3B3D0}.AppStore|Any CPU.Build.0 = AppStore|Any CPU
+		{E23D7BA3-B491-4D8C-B6FD-6E552FB3B3D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E23D7BA3-B491-4D8C-B6FD-6E552FB3B3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E23D7BA3-B491-4D8C-B6FD-6E552FB3B3D0}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{E23D7BA3-B491-4D8C-B6FD-6E552FB3B3D0}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{E23D7BA3-B491-4D8C-B6FD-6E552FB3B3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E23D7BA3-B491-4D8C-B6FD-6E552FB3B3D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECBCE759-E50E-4956-9FEA-8F2C67A07E73}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECBCE759-E50E-4956-9FEA-8F2C67A07E73}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{ECBCE759-E50E-4956-9FEA-8F2C67A07E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECBCE759-E50E-4956-9FEA-8F2C67A07E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECBCE759-E50E-4956-9FEA-8F2C67A07E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECBCE759-E50E-4956-9FEA-8F2C67A07E73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = DexMac\DexMac.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.StandardHeader = $2
+		$2.Text = 
+		$2.IncludeInNewFiles = True
+	EndGlobalSection
+EndGlobal
