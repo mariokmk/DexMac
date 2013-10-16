@@ -1,0 +1,3 @@
+[submodule "dex.net"]
+	path = dex.net
+	url = git://github.com/mariokmk/dex.net.git
