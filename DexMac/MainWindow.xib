@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <subviews>
                             <searchField verticalHuggingPriority="750" id="48">
-                                <rect key="frame" x="422" y="7" width="183.99999999999997" height="22"/>
+                                <rect key="frame" x="422" y="7" width="184" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                 <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Package, Class or Method" usesSingleLineMode="YES" bezelStyle="round" id="49">
                                     <font key="font" metaFont="system"/>
@@ -70,7 +70,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="626" height="337"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="14">
+                            <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="14">
                                 <rect key="frame" x="0.0" y="0.0" width="179" height="337"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" id="Zc7-fG-UE7">
@@ -84,7 +84,7 @@
                                             <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="174" minWidth="16" maxWidth="1000" id="19" userLabel="ClassMethodTableColumn">
+                                                <tableColumn editable="NO" width="174" minWidth="16" maxWidth="1000" id="19" userLabel="ClassMethodTableColumn">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
