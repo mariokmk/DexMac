@@ -7,6 +7,8 @@ using System.IO;
 using ICSharpCode.SharpZipLib.Zip;
 using dex.net;
 using MonoMac.CoreText;
+using System.Text.RegularExpressions;
+using MonoMac.CoreGraphics;
 
 namespace DexMac
 {
@@ -17,6 +19,7 @@ namespace DexMac
 		private WritersFactory _factory = new WritersFactory ();
 		private IDexWriter _writer;
 		private CTStringAttributes _codeFont;
+		private List<CodeHighlight> _codeHighlight = new List<CodeHighlight> ();
 		private ClassDisplayOptions _classDisplayOptions = ClassDisplayOptions.ClassAnnotations |
 			ClassDisplayOptions.ClassName | ClassDisplayOptions.ClassDetails | ClassDisplayOptions.Fields;
 
@@ -83,7 +86,7 @@ namespace DexMac
 			this.Window.Delegate = new DexWindowDelegate (this);
 
 			_codeFont = new CTStringAttributes () {
-				Font = new CTFont("Menlo", 12f)
+				Font = new CTFont("Menlo-Regular", 12f)
 			};
 
 			codeTextView.TextContainer.WidthTracksTextView = false;
@@ -117,6 +120,11 @@ namespace DexMac
 
 			_writer = _factory.GetWriter (lang);
 			_writer.dex = _dex;
+
+			_codeHighlight.Clear ();
+			foreach (var highlight in _writer.GetCodeHightlight()) {
+				_codeHighlight.Add (new CodeHighlight (highlight));
+			}
 		}
 
 		private void PopulateClasses() 
@@ -140,9 +148,20 @@ namespace DexMac
 				_writer.WriteOutMethod (dexMethod._class, dexMethod._method, writer, new Indentation(), true);
 			}
 
-			var attrString = new NSAttributedString ((NSString)writer.ToString (), _codeFont);
+			codeTextView.TextStorage.SetString(HighlightCode(writer.ToString ()));
+		}
 
-			codeTextView.TextStorage.SetString(attrString);
+		private NSAttributedString HighlightCode(String code)
+		{
+			var highlightedCode = new NSMutableAttributedString (new NSAttributedString ((NSString)code, _codeFont));
+
+			foreach (var highlight in _codeHighlight) {
+				foreach (Match match in highlight.Expression.Matches(code)) {
+					highlightedCode.AddAttribute(NSAttributedString.ForegroundColorAttributeName, highlight.Color, new NSRange(match.Groups[1].Index, match.Groups[1].Length));
+				}
+			}
+
+			return (NSAttributedString)highlightedCode.Copy();
 		}
 
 		void ApplySearchFilter (object sender, EventArgs e)
@@ -192,6 +211,18 @@ namespace DexMac
 					} catch {
 					}
 				}
+			}
+		}
+
+		class CodeHighlight
+		{
+			internal Regex Expression;
+			internal NSColor Color;
+
+			internal CodeHighlight(HightlightInfo info)
+			{
+				Expression = info.Expression;
+				Color = NSColor.FromDeviceRgba(info.Color.Red/255f, info.Color.Green/255f, info.Color.Blue/255f, 1);
 			}
 		}
 	}
