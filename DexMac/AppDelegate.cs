@@ -30,10 +30,18 @@ namespace DexMac
 				MainWindowController windowController = null;
 				try {
 					windowController = new MainWindowController ();
+					windowController.OpenDex (openPanel.Url.Path);
 					windowController.Window.MakeKeyAndOrderFront (this);
-					windowController.OpenDex (openPanel.Filename);
 				} catch (Exception e) {
 					Console.WriteLine(e);
+
+					// Show error message to the user
+					var alert = new NSAlert {
+						MessageText = e.Message,
+						AlertStyle = NSAlertStyle.Critical
+					};
+					alert.AddButton("OK");
+					alert.RunModal();
 
 					if (windowController != null) {
 						windowController.Close ();

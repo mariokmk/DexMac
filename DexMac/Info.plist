@@ -14,11 +14,11 @@
 	<string>NSApplication</string>
 	<key>CFBundleIconFile</key>
 	<string>dexmac</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.developer-tools</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>https://github.com/mariokmk/dex.net</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.5</string>
 </dict>
 </plist>

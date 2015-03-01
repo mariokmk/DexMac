@@ -94,7 +94,10 @@ namespace DexMac
 
 			searchField.Changed += ApplySearchFilter;
 
-			dexOutlineView.DataSource = new DexDataSource();
+			var dexDataSource = new DexDataSource();
+			dexDataSource.SetData (_dex);
+
+			dexOutlineView.DataSource = dexDataSource;
 			//dexOutlineView.SelectionDidChange += OnSelectionChanged;
 			dexOutlineView.Delegate = new OutlineViewWorkaroundDelegate (this);
 
@@ -104,8 +107,6 @@ namespace DexMac
 
 			UpdateSelectedLanguage ();
 			_writer.dex = _dex;
-
-			PopulateClasses();
 		}
 
 		partial void languagePopUpButtonClicked (MonoMac.Foundation.NSObject sender)
